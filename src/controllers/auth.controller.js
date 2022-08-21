@@ -41,14 +41,14 @@ const login = async (req,res)=>{
    
      // if user is not found then throw an error 400 bad request .
    if(!user)
-     return res.status(400).send({message : "either or password is incorrect"});
+     return res.status(400).send({message : "either email or password is incorrect"});
 
       // if user found then try to match the password provided with the password in db
     const match = user.checkPassword(req.body.password) ; 
   
      // if not match then throw an error 400 bad request 
     if(!match)
-    return res.status(400).send({message : "either or password is incorrect"});
+    return res.status(400).send({message : "either email or password is incorrect"});
 
     
     // if password also matches then create a token 
