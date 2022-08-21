@@ -4,14 +4,11 @@
   "description": "",
   "main": "index.js",
   
-
+ 
   "scripts": {
     "server": "nodemon src/server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shashifw11/AuthBackend.git"
-  },
+  
   "engines": {
     "node": "14.17.1"
   },
