@@ -1,8 +1,6 @@
   require("dotenv").config(); 
-
-  const jwt = require("jsonwebtoken");
-
- const User = require("../models/user.model") ; 
+const jwt = require("jsonwebtoken");
+const User = require("../models/user.model") ; 
 
   const newToken = (user)=>{
     return jwt.sign({user:user },process.env.JWT_SECRET_KEY)  // , { algorithm: 'RS256'}
@@ -63,4 +61,4 @@ const login = async (req,res)=>{
      return res.send("Login");
 }
 
-module.exports = {register , login} ; 
+module.exports = {register , login , newToken} ; 
